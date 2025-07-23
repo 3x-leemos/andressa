@@ -12,11 +12,32 @@ body {
    margin: auto;
 }
 
-.foto {
-    width: 200px;
+.foto-romantica {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem;
+    padding: 10px;
+    background: radial-gradient(circle, #fff0f5, 40%, #ff69b4);
+    border: 4px dashed #ff1493;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6), 0 0 10px #ffb6c1 inset;
+    position: relative;
+    z-index: 1;
+    animation: brilhar 3s infinite alternate;
+    transition: transform 0.4s ease;
+    object-fit: cover;
+}
+
+.foto-romantica:hover {
+    transform: scale(1.05);
+}
+
+@keyframes brilhar {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 182, 193, 0.4), 0 0 10px #ffc0cb inset;
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 105, 180, 0.8), 0 0 12px #ff69b4 inset;
+    }
 }
 
 h1 {
@@ -134,5 +155,22 @@ canvas {
     100% {
         transform: translateY(-100vh) rotate(45deg);
         opacity: 0;
+    }
+}
+
+.decoracao-coracao {
+    font-size: 1.8rem;
+    animation: pulsoCoracoes 2s infinite;
+    margin-top: 0.5rem;
+}
+
+@keyframes pulsoCoracoes {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
     }
 }
