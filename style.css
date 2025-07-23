@@ -147,6 +147,22 @@ canvas {
     background-color: #ff1493;
 }
 
+#btnPergunta {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+#btnPergunta:hover {
+    background-color: #ff1493;
+}
+
 @keyframes flutuar {
     0% {
         transform: translateY(0) rotate(45deg);

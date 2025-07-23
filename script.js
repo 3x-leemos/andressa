@@ -2,6 +2,13 @@ const btnSim = document.getElementById("btnSim");
 const celebracao = document.getElementById("celebracao");
 const musica = document.getElementById("musica");
 
+document.getElementById("btnPergunta").addEventListerner("click", () => {
+
+document.getElementById("perguntaInicial").ClassList.add("oculto");
+
+document.getElementById("respostas").classList.remove("oculto");
+});
+
 function aceitarPedido() {
     celebracao.classList.remove("oculto");
     musica.play();
