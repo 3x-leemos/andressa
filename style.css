@@ -40,6 +40,23 @@ body {
     }
 }
 
+.decoracao-coracao {
+    font-size: 1.8rem;
+    animation: pulsoCoracoes 2s infinite;
+    margin-top: 0.5rem;
+}
+
+@keyframes pulsoCoracoes {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
 h1 {
     color: #c71585;
     font-size: 2.5rem;
@@ -51,21 +68,48 @@ h1 {
     font-size: 1.2rem;
 }
 
-button {
+#btnPergunta {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
     background-color: #ff69b4;
     color: white;
-    padding: 1rem 2rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    margin: 1rem 0.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: background 0.3s;
 }
 
-button:hover {
+#btn:hover {
     background-color: #ff1493;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.resposta {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.resposta:hover {
+    background-color: #ff1493;
+}
+
+#celebracao {
+    margin-top: 3rem;
+    animation: aparecer 1s ease forwards;
 }
 
 .oculto {
@@ -80,8 +124,8 @@ canvas {
 }
 
 @keyframes aparecer {
-    from { opacity: o; transform: scale(0.8);}
-    to { opacity: 1; transform: scale(1);}
+    from { opacity: o; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 #hearts-container {
@@ -123,46 +167,6 @@ canvas {
     left: -10px;
     top: 0;
 }
-
-.botoes {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.resposta {
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.resposta:hover {
-    background-color: #ff1493;
-}
-
-#btnPergunta {
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background 0.3s;
-}
-
-#btnPergunta:hover {
-    background-color: #ff1493;
-}
-
 @keyframes flutuar {
     0% {
         transform: translateY(0) rotate(45deg);
@@ -171,22 +175,5 @@ canvas {
     100% {
         transform: translateY(-100vh) rotate(45deg);
         opacity: 0;
-    }
-}
-
-.decoracao-coracao {
-    font-size: 1.8rem;
-    animation: pulsoCoracoes 2s infinite;
-    margin-top: 0.5rem;
-}
-
-@keyframes pulsoCoracoes {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
     }
 }

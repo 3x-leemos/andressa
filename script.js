@@ -1,12 +1,14 @@
 const btnSim = document.getElementById("btnSim");
+const btnClaro = document.getElementById("btnClaro");
+const btnPergunta = document.getElementById("btnPergunta");
 const celebracao = document.getElementById("celebracao");
+const resposta = document.getElementById("respostas");
 const musica = document.getElementById("musica");
 
-document.getElementById("btnPergunta").addEventListerner("click", () => {
+btnPergunta.addEventListener("click", () => {
 
 document.getElementById("perguntaInicial").ClassList.add("oculto");
-
-document.getElementById("respostas").classList.remove("oculto");
+  resposta.classeList.remove("oculto");
 });
 
 function aceitarPedido() {
@@ -15,8 +17,8 @@ function aceitarPedido() {
     iniciarFogos();
 }
 
-document.getElementById("btnSim").addEventListener("click", aceitarPedido);
-document.getElementById("btnClaro").addEventListener("click", aceitarPedido);
+btnSim.addEventListener("click", aceitarPedido);
+btnClaro.addEventListener("click", aceitarPedido);
 
 function iniciarFogos() {
     const canvas = document.getElementById('fogos');
@@ -66,6 +68,5 @@ function criarCoracoes() {
 }
 
 window.onload = () => {
-    musica.play();
     criarCoracoes();
 };
