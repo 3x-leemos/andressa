@@ -1,14 +1,13 @@
 const btnSim = document.getElementById("btnSim");
 const btnClaro = document.getElementById("btnClaro");
 const btnPergunta = document.getElementById("btnPergunta");
-const celebracao = document.getElementById("celebracao");
 const resposta = document.getElementById("respostas");
 const musica = document.getElementById("musica");
-
+const celebracao = document.getElementById("celebracao");
 btnPergunta.addEventListener("click", () => {
 
 document.getElementById("perguntaInicial").ClassList.add("oculto");
-  resposta.classeList.remove("oculto");
+  respostas.classeList.remove("oculto");
 });
 
 function aceitarPedido() {
